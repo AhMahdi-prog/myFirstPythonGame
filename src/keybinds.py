@@ -18,7 +18,7 @@ class UniversalPovMove:
         
     def checkFirstPage(self):
         questioning1Rn = False
-        if self.keys[py.K_1]:
+        if self.keys[py.K_0]:
             questioning1Rn = True
             return questioning1Rn
         else:
