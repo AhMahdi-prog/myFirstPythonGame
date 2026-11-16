@@ -17,6 +17,13 @@ clock = pygame.time.Clock()
 running = True
 dt = 0
 
+#Init stuff
+styling = style.__init__()
+you = personAtStart.__init__(screen)
+enemyBigBlue = enemyAtStart.__init__(screen)
+starting_page = startingPage.__init__(screen, styling.getFont())
+
+
 while running:
     # poll for events
     for event in pygame.event.get():
@@ -24,8 +31,10 @@ while running:
             running = False
     
     #Code for game YAYAYAYAYYA!!!!!
+    startingPage.updatePage()
     move = UniversalPovMove.UniKeybinds()
-    
+    you = personAtStart.moveCircle()
+    enemyBigBlue = enemyAtStart.moveThisEnemy()
   
     # flip() the display to put your work on screen
     pygame.display.flip()
