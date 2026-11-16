@@ -13,3 +13,4 @@ class UniversalPovMove:
             player_pos.x -= 300 * dtime
         if keys[py.K_d] or keys[py.K_RIGHT]:
             player_pos.x += 300 * dtime
+            

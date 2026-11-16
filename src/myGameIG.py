@@ -35,7 +35,8 @@ while running:
     you.moveCircle(screen)
     move.UniKeybinds(you.getPOV(), dt)
     enemyBigBlue.moveThisEnemy(dt, you.getPOV())
-  
+    starting_page.newPage()
+    
     # flip() the display to put your work on screen
     pygame.display.flip()
 

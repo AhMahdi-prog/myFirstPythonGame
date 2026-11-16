@@ -25,9 +25,12 @@ class startingPage:
             self.current_width += (self.base_width - self.current_width) * 0.2
             self.current_height += (self.base_height - self.current_height) * 0.2
         py.draw.rect(self.sc, color, startRectangle, border_radius=12)
-        text_surface = self.font.render("Start Game", True, "black")
+        text_surface = self.font.render("To Start Game Press 1", True, "black")
         text_rect = text_surface.get_rect(center=startRectangle.center)
         self.sc.blit(text_surface, text_rect)
+    def newPage(self):
+        if [py.K_1]:
+             self.sc.fill("white")
 
 
 
