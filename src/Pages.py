@@ -28,9 +28,10 @@ class startingPage:
         text_surface = self.font.render("To Start Game Press 1", True, "black")
         text_rect = text_surface.get_rect(center=startRectangle.center)
         self.sc.blit(text_surface, text_rect)
-    def newPage(self):
-        if [py.K_1]:
-             self.sc.fill("white")
 
+class SecondPage:
+    def __init__(self, screen):
+        self.sc = screen
+        self.sc.fill("white")
 
 

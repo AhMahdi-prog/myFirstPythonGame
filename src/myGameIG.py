@@ -5,9 +5,10 @@ import random as r
 #Imports from other files
 from keybinds import UniversalPovMove
 from enemy import enemyAtStart
-from startingPage import startingPage
+from Pages import startingPage
 from styleStuff import style
 from person import personAtStart
+from Pages import SecondPage
 
 # pygame setup
 pygame.init()
@@ -21,7 +22,7 @@ dt = 0
 styling = style()
 you = personAtStart(screen)
 enemyBigBlue = enemyAtStart(screen)
-starting_page = startingPage(screen, styling.getFont())
+page = startingPage(screen, styling.getFont())
 move = UniversalPovMove()
 
 while running:
@@ -31,11 +32,13 @@ while running:
             running = False
     
     #Code for game YAYAYAYAYYA!!!!!
-    starting_page.updatePage()
-    you.moveCircle(screen)
-    move.UniKeybinds(you.getPOV(), dt)
-    enemyBigBlue.moveThisEnemy(dt, you.getPOV())
-    starting_page.newPage()
+    if (move.checkFirstPage()):
+        page = SecondPage(screen)
+    else:
+        page.updatePage()
+        you.moveCircle(screen)
+        move.UniKeybinds(you.getPOV(), dt)
+        enemyBigBlue.moveThisEnemy(dt, you.getPOV())
     
     # flip() the display to put your work on screen
     pygame.display.flip()
