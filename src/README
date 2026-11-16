@@ -1,0 +1,9 @@
+So Basically all you have to know:
+1. Enemy.py contains the code for enemies or whatever you are fighting in the game really.
+2. Keybinds.py contains the code for keybind handling basically.
+3. myGameIG.py contrains the code that you actually run for the game to work. (Think of it as 
+the main method in java)
+4. person.py contains the code for the Point Of View that you have in the game and or the 
+character that you control
+5. styleStuff is for styling such as fonts and all other things that you use to style really
+6. startingPage.py contains the code to create the front page that opens up when you run the code.
